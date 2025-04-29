@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './Country.css';
-const Country = ({country,handelvisitedCountry}) => {
+const Country = ({country,handelvisitedCountry,handelvisitedFlag}) => {
     // console.log(country)
     
-    const handlevisited =(visit)=>{
+    const handlevisited =()=>{
 
       setvisited(!visited)
     }
@@ -24,6 +24,7 @@ const Country = ({country,handelvisitedCountry}) => {
                 justifyContent:'space-around',
                
             }}>
+            <button onClick={()=>handelvisitedFlag(country.flags.png)}>Visited Flag</button>
             <button style={{
                 backgroundColor:visited ? 'black':'green',
                 color: visited ? 'white':'white '
