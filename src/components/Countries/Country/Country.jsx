@@ -16,7 +16,12 @@ const Country = ({country}) => {
             <h6>Area : {area}</h6>
             <p><small>Code : {cca3}</small></p>
             <img className='flags' src={flags?.png} alt="" /> <br /><br />
-            <button  onClick={handlevisited}>{visited ? 'Visited':'Going'}</button> <br /><br />
+            <button  style={{
+                backgroundColor: visited? 'black':'green',
+                color: visited ? 'white':'white ',
+                fontWeight:700
+            
+            }}  onClick={handlevisited}>{visited ? 'Visited':'Going'}</button> <br /><br />
             {visited ? 'I have Visited This Country' : 'I want to Visited'}
         </div>
     );
