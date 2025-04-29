@@ -23,7 +23,7 @@ const Countries = () => {
     return (
        
         <div >
-             <h3>Countries : {countries.length} </h3>
+             <h3>Total Countries : {countries.length} </h3>
              
             <div>
                <h5>Visited Countries : {visitedCountries.length} </h5>
