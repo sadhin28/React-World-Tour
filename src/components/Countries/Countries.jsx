@@ -13,8 +13,9 @@ const Countries = () => {
 
     const handelvisitedCountry =country=>{
         
-        const {name}=country
-       visitedCountries.push(country.length);
+       
+       const newvisitedCountries = [...visitedCountries, country]
+        setvisitedCountries(newvisitedCountries)
     }
     return (
        
@@ -23,7 +24,9 @@ const Countries = () => {
             <div>
                <h5>Visited Countries : {visitedCountries.length} </h5>
                  <ul>
-                    <li>{}</li>
+                    {
+                        visitedCountries.map(country =><li>{country.name.common}</li>)
+                    }
                  </ul>
             </div>
        <div className="country-container">
