@@ -12,15 +12,19 @@ const Countries = () => {
     },[])
 
     const handelvisitedCountry =country=>{
-        console.log('')
+        
+        const {name}=country
+       visitedCountries.push(country.length);
     }
     return (
        
         <div >
              <h3>Countries : {countries.length} </h3>
             <div>
-               <h5>Visited Countries </h5>
-
+               <h5>Visited Countries : {visitedCountries.length} </h5>
+                 <ul>
+                    <li>{}</li>
+                 </ul>
             </div>
        <div className="country-container">
        {

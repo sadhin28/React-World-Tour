@@ -7,7 +7,7 @@ const Country = ({country,handelvisitedCountry}) => {
 
       setvisited(!visited)
     }
-    console.log(handelvisitedCountry)
+   const passWithParams =()=>  handelvisitedCountry(country)
     const {name,flags,population,area,cca3}=country;
     const [visited,setvisited]=useState(false)
     
@@ -19,6 +19,7 @@ const Country = ({country,handelvisitedCountry}) => {
             <h6>Area : {area}</h6>
             <p><small>Code : {cca3}</small></p>
             <img className='flags' src={flags?.png} alt="" /> <br /><br />
+            <button onClick={passWithParams}>Mark Visited</button>
             <button  style={{
                 backgroundColor: visited? 'black':'green',
                 color: visited ? 'white':'white ',
