@@ -19,13 +19,22 @@ const Country = ({country,handelvisitedCountry}) => {
             <h6>Area : {area}</h6>
             <p><small>Code : {cca3}</small></p>
             <img className='flags' src={flags?.png} alt="" /> <br /><br />
-            <button onClick={passWithParams}>Mark Visited</button>
+            <div style={{
+                display:'flex',
+                justifyContent:'space-around',
+               
+            }}>
+            <button style={{
+                backgroundColor:visited ? 'black':'green',
+                color: visited ? 'white':'white '
+            }} onClick={passWithParams}>Mark Visited</button>
             <button  style={{
                 backgroundColor: visited? 'black':'green',
                 color: visited ? 'white':'white ',
                 fontWeight:700
             
-            }}  onClick={handlevisited}>{visited ? 'Visited':'Going'}</button> <br /><br />
+            }}  onClick={handlevisited}>{visited ? 'Visited':'Going'}</button>
+            </div> <br />
             {visited ? 'I have Visited This Country' : 'I want to Visited'}
         </div>
     );
