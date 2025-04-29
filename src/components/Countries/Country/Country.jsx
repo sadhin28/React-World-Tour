@@ -3,13 +3,13 @@ import './Country.css';
 const Country = ({country}) => {
     console.log(country)
     const handlevisited =()=>{
-        
+
       setvisited(!visited)
     }
     const {name,flags,population,area,cca3}=country;
     const [visited,setvisited]=useState(false)
     return (
-        <div className='country'>
+        <div className={`country ${visited && 'visited'}`}>
             <h4>Country Name : {name?.common} </h4>
             <h5>Official Name : {name?.official}</h5>
             <h5>Population : {population}</h5>
