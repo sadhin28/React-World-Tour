@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import './Country.css';
-const Country = ({country}) => {
-    console.log(country)
-    const handlevisited =()=>{
+const Country = ({country,handelvisitedCountry}) => {
+    // console.log(country)
+    
+    const handlevisited =(visit)=>{
 
       setvisited(!visited)
     }
+    console.log(handelvisitedCountry)
     const {name,flags,population,area,cca3}=country;
     const [visited,setvisited]=useState(false)
+    
     return (
         <div className={`country ${visited && 'visited'}`}>
             <h4>Country Name : {name?.common} </h4>
